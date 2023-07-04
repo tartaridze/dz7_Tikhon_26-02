@@ -12,11 +12,11 @@ const searchCity = () => {
             .then(data => {
                 city.innerHTML = data?.name ? data.name : 'Город не найден'
                 temp.innerHTML = data?.main ? Math.round(data.main.temp - 273) + '&deg' + 'C' : '..."'
-                if (cityName.value === '') {
-                        city.innerHTML = 'Введите город'
-                }
+            
             })
-
+        if (cityName.value === '') {
+            city.innerHTML = 'Введите город'
+        }
     })
 }
 
